@@ -8,7 +8,8 @@
         •  移动网页应用是指网页应用，例如IOS中Safari，Chrome等浏览器的应用。
         •  混合应用是指一种包裹WebView的应用，原生应用于网页内容交互性的应用，例如微信即有分期
         •  其中最重要的是Appium是跨平台的，何为跨平台，意思就是可以针对不同的平台用一套API来编写测试用例
-![](https://pan.baidu.com/s/1ZwIX1nCZjIVmfzNxVbNOeg)
+![输入图片说明](https://pan.baidu.com/s/1ZwIX1nCZjIVmfzNxVbNOeg "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0829/144253_111773ec_482055.jpeg "在这里输入图片标题")
 
 ### 框架介绍
     Java + Appium + Maven + TestNG + JDBC + Xml+ Git + +Ant + Jenkins 
@@ -233,7 +234,8 @@
 #### 如果您觉得这个产品对您有用，您可以捐赠下我，让我有理由继续下去，非常感谢。
 
 非常感谢您花费时间阅读，祝您在这里记录、阅读、分享愉快！
-
+报告展示如下：<a href="http://www.webdriver.org/doc/patatiumappui/report/report.html" target="_blank">点击查看在线报告</a>
+报告展示如下：<a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=130608630" target="_blank">点击查看在线报告</a>
 作者：<a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=130608630" target="_blank">@刘智King</a>
 2018 年 4 月 20 日
 有不懂的地方，点击名称可加QQ好友联系我......
