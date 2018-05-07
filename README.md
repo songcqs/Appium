@@ -192,7 +192,10 @@
 ### 五、测试报告
  - 测试报告分为两种，一种是TestNG自带的TestngReport测试报告，另外一种则是调用ExtentReports生成的报告，第二张更加美观，清晰
 
-####【TestngReport】
+#### TestngReport
+    <?xml version="1.0" encoding="UTF-8"?>
+
+###【TestngReport】
     <?xml version="1.0" encoding="UTF-8"?>
     <suite name="Appium测试报告" parallel="false" configfailurepolicy ="continue">
         <test name="微信登录流程" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="60000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
@@ -205,6 +208,7 @@
                     </methods>
             </classes>
         </test>  
+     ------------------------------------------------------------------------------------------------------
     <!-- 调用的监听 -->    
         <listeners>
             <listener class-name="org.uncommons.reportng.HTMLReporter" />
@@ -212,7 +216,7 @@
         </listeners>      
     </suite>
 
-####【ExtentReports】
+###【ExtentReports】
     <?xml version="1.0" encoding="UTF-8"?>
     <suite name="Suite" verbose="1" preserve-order="true" parallel="false">
         <suite-files>
@@ -233,10 +237,10 @@
 
 非常感谢您花费时间阅读，祝您在这里记录、阅读、分享愉快！
 
-作者 [@刘智King][1]  
+作者 [@刘智King](tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=130608630)
 2018 年 4 月 20 日
 有不懂的地方，点击名称可加QQ好友联系我......  
-[1]: tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=130608630
+
 
 
 
