@@ -235,7 +235,7 @@
 ### 六、感谢
 #### 如果您觉得这个产品对您有用，您可以捐赠下我，让我有理由继续下去，非常感谢。
 ![](https://static.oschina.net/uploads/space/2018/0508/150439_R9a6_3854545.png)
-![](/uploads/photo/2018/26d494a6-7b4f-4b69-8db1-0a3b45f886b7.png!large)
+![](https://testerhome.com/uploads/photo/2018/26d494a6-7b4f-4b69-8db1-0a3b45f886b7.png!large)
 
 **非常感谢您花费时间阅读，祝您在这里记录、阅读、分享愉快！**
 **欢迎留言评论，有问题也可以联系我或者加群交流....**
