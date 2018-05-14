@@ -231,9 +231,15 @@
  - 第二种测种试报告，需要翻墙才能正常显示，否则页面显示乱码，因为是国外的东西
  - 或者在C:\Windows\System32\drivers\etc    host文件末尾添加151.139.237.11   cdn.rawgit.com
 
+### 六、Jnekins持续集成：
+![](https://testerhome.com/uploads/photo/2018/6c209373-80f5-47f3-a9d7-e7dbfe3ea523.png!large)
+![](https://testerhome.com/uploads/photo/2018/e24ab598-67da-471d-a924-cc5360c92ec7.png!large)
+ - 搭建Jenkins环境，具体请参考: https://blog.csdn.net/wuxuehong0306/article/details/50016547
+ - 配置Jenkins自动化持续集成项目，即可实现远程服务器自动（构建，编译，打包）运行脚本，发送邮件测试报告等
+ 
  ---
-### 六、感谢
-#### 如果您觉得这个产品对您有用，您可以捐赠下我，让我有理由继续下去，非常感谢。
+### 七、感谢
+#### 如果您觉得这个框架对您有用，您可以捐赠下我，让我有理由继续下去，非常感谢。
 ![](https://testerhome.com/uploads/photo/2018/26d494a6-7b4f-4b69-8db1-0a3b45f886b7.png!large)
 
 **非常感谢您花费时间阅读，祝您在这里记录、阅读、分享愉快！**
