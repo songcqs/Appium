@@ -10,6 +10,7 @@
         •  混合应用是指一种包裹WebView的应用，原生应用于网页内容交互性的应用，例如微信即有分期
         •  其中最重要的是Appium是跨平台的，何为跨平台，意思就是可以针对不同的平台用一套API来编写测试用例
 
+ ---
 ### 框架介绍
     Java + Appium + Maven + TestNG + JDBC + Xml+ Git + +Ant + Jenkins 
         •  使用Java作为项目编程语言
@@ -22,6 +23,7 @@
         •  使用Ant作为Java的build打包工具，方便项目代码打包
         •  使用Jenkins作为自动化持续集成平台，方便自动编译，自动打包，自动运行测试脚本，邮件发送测试报告
 
+ ---
 ### 主要功能
     1.  实现了基于Appium，WebDriver等常用操作方法的二次封装，包括（滑动，点击，输入，元素定位）等，使用起来更简便
     2.  实现了基于Windows，Android，IOS操作系统的cmd，adb，terminal常用DOS命令的快速调用
@@ -34,6 +36,7 @@
     9.  实现了常用API接口请求操作，包含（POST，GET）等，可直接在测试脚本中调用，只需传递对应参数即可，满足多种测试需求
     10. 实现了基于ExtentReports，TestNG生成的测试报告二次美化功能，界面更美观，内容清晰
 
+ ---
 ### 环境配置
    1. [JDK1.7以上](http://www.Oracle.com/technetwork/Java/javase/downloads/index.html)
    2. [Eclipse](http://www.eclipse.org/downloads)/[IDEA](https://www.jetbrains.com/idea/)
@@ -47,10 +50,12 @@
    9. [一台安卓手机或者安卓模拟器，推荐使用真机](https://www.yeshen.com) 
 
  - 部分网站需要翻墙，具体安装参考：https://blog.csdn.net/love4399/article/details/77164500
-  
+ 
+ ---
 ### 注意事项
  - 工程项目编码需要设置成UTF-8，否则会出现中文乱码情况
 
+ ---
 ### 一、创建测试对象类，例如【WeChatLogin.java】
     package TestCases;
 
@@ -91,6 +96,7 @@
         }
     }
 
+ ---
 ### 二、创建测试脚本用例，例如【WeChatLogin.xml】
     <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
     <unit id="WeChatLogin" desc="微信登录流程的测试场景点">
@@ -120,6 +126,7 @@
 
   - 具体脚本编方法请参考: https://pan.baidu.com/s/1fdMMGrr9XY6lJdXCv-1AYw
 
+ ---
 ### 三、Appium服务配置
     public static void appiumConfigure() throws Exception {
           //指定APK安装路径:
@@ -186,10 +193,12 @@
 
  - 测试执行时需要指定DeviceName，PlatformName，PlatformVersion等信息，DeviceName通过命令adb devices获取
 
+ ---
 ### 四、执行用例
  - 编写完对应测试用例类【WeChatLogin.java】，和测试脚本【WeChatLogin.xml】后，在IDE集成开发环境下选择WeChatLogin.java右键使用TestNG运行即可
 ![](https://testerhome.com/uploads/photo/2018/d50bb63a-c419-42d6-9606-cc587c219a3b.png!large)
 
+ ---
 ### 五、测试报告
  - 测试报告分为两种，一种是TestNG自带的TestngReport测试报告，另外一种则是调用ExtentReports生成的报告，第二种更加美观
 
