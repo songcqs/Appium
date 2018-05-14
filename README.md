@@ -230,7 +230,8 @@
  ![](https://testerhome.com/uploads/photo/2018/d0a65967-b63b-4a0a-acc5-dcd7e1988fce.png!large)
  - 第二种测种试报告，需要翻墙才能正常显示，否则页面显示乱码，因为是国外的东西
  - 或者在C:\Windows\System32\drivers\etc    host文件末尾添加151.139.237.11   cdn.rawgit.com
-
+ 
+ ---
 ### 六、Jnekins持续集成：
 ![](https://testerhome.com/uploads/photo/2018/6c209373-80f5-47f3-a9d7-e7dbfe3ea523.png!large)
 ![](https://testerhome.com/uploads/photo/2018/e24ab598-67da-471d-a924-cc5360c92ec7.png!large)
