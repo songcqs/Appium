@@ -224,6 +224,7 @@
     </suite>
 ![](https://testerhome.com/uploads/photo/2018/7ed6f23c-6ede-4439-8dac-1a09a0885221.png!large)
 
+ ---
 ### [ExtentReports](https://static.oschina.net/uploads/space/2018/0508/141802_q76M_3854545.png)
     <?xml version="1.0" encoding="UTF-8"?>
     <suite name="Suite" verbose="1" preserve-order="true" parallel="false">
