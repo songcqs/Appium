@@ -4,6 +4,7 @@
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="AutomationTestSystem.Service.ExtentReportGenerateService"/>
   </listeners>
   <test thread-count="5" verbose="3" name="微信登录流程" time-out="60000">
     <classes>
