@@ -74,9 +74,13 @@ public class AndroidXmlParseService {
 		//当前连接的手机,默认识别一台
 //		capabilities.setCapability("deviceName", "Android Emulator");
 	
-		//小米5S(黑色-USB有线连接)
+		//指定测试设备名称及设备ID:
         capabilities.setCapability("deviceName", DeviceID);
         capabilities.setCapability("udid", DeviceID);
+        
+		//小米5S(黑色-USB有线连接)
+//        capabilities.setCapability("deviceName", "29739ff4");
+//        capabilities.setCapability("udid", "29739ff4");
         
         //小米5S(金色-WIFI无线连接)
 //        capabilities.setCapability("deviceName", ConfigUtil.getProperty("MI_5S_golden.WIFI", Constants.CONFIG_COMMON));
