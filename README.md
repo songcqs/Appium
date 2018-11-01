@@ -183,7 +183,7 @@
         capabilities.setCapability("app", apk.getAbsolutePath());
         
         //进入Webview
-//      capabilities.setCapability("autoWebview", true);
+        //capabilities.setCapability("autoWebview", true);
 
         //初始化AndroidDriver
         driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
