@@ -14,8 +14,7 @@ import AutomationTestSystem.Util.SeleniumUtil;
  * <br>处理界面上的点击操作，即如果当前操作为点击，<br/>
  * 则选中脚本中配置的节点，并执行点击操作</br>
  *
- * @author  102051
- * @email   mengxiw@dafycredit.com
+ * @author  刘智
  * @date    2017年7月26日 上午10:27:26
  * @version 1.0
  * @since   1.0

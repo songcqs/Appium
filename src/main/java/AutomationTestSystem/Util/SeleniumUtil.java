@@ -13,8 +13,7 @@ import AutomationTestSystem.Base.TestStep;
 /**
  * <br>公用函数功能</br>
  *
- * @author  102051
- * @email   mengxiw@dafycredit.com
+ * @author  刘智
  * @date    2017年7月27日 下午4:07:18
  * @version 1.0
  * @since   1.0
