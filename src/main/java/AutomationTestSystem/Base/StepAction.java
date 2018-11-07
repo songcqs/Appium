@@ -9,6 +9,7 @@ import AutomationTestSystem.Handler.ClearActionHandler;
 import AutomationTestSystem.Handler.ClickActionHandler;
 import AutomationTestSystem.Handler.DBActionHandler;
 import AutomationTestSystem.Handler.GetUrlActionHandler;
+import AutomationTestSystem.Handler.HttpRequestHandler;
 import AutomationTestSystem.Handler.InputActionHandler;
 import AutomationTestSystem.Handler.RecordActionHandler;
 import AutomationTestSystem.Handler.SetActionHandler;
@@ -72,8 +73,8 @@ public enum StepAction {
     SLIDE_LEFT("slide-left", "向左滑动", SlideActionHandler.class),
     SLIDE_RIGHT("slide-right", "向右滑动", SlideActionHandler.class),
     
-//    GET_COOKIE("get-cookie", "获取cookie值", HttpRequestHandler.class),
-//    SEND_POST("send-post", "发送Post接口请求", HttpRequestHandler.class),
+    GET_COOKIE("get-cookie", "获取cookie值", HttpRequestHandler.class),
+    SEND_POST("send-post", "发送Post接口请求", HttpRequestHandler.class),
     
     DB_INSERTA("db-inserta", "Oracle数据库插入", DBActionHandler.class),
     DB_INSERTW("db-insertw", "Oracle数据库插入", DBActionHandler.class),
