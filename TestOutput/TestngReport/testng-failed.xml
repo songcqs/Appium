@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite configfailurepolicy="continue" name="Failed suite [Appium测试报告]">
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-    <listener class-name="AutomationTestSystem.Service.ExtentReportGenerateService"/>
-  </listeners>
-  <test thread-count="5" verbose="3" name="微信登录流程" time-out="60000">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="TestCases.WeChatLogin">
-        <methods>
-          <include name="case1"/>
-          <include name="case2"/>
-          <exclude name=""/>
-        </methods>
-      </class> <!-- TestCases.WeChatLogin -->
+      <class name="TestCases.WeChatLogin"/>
     </classes>
-  </test> <!-- 微信登录流程 -->
-  <test name="微信登录流程(failed)">
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
     <classes>
       <class name="TestCases.WeChatLogin">
         <methods>
@@ -27,5 +16,5 @@
         </methods>
       </class> <!-- TestCases.WeChatLogin -->
     </classes>
-  </test> <!-- 微信登录流程(failed) -->
-</suite> <!-- Failed suite [Appium测试报告] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

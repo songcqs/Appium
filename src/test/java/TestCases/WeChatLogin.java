@@ -14,7 +14,7 @@ public class WeChatLogin {
 		
 	@BeforeTest
 	private void stup() throws Exception{
-		TestUnit testunit = AndroidXmlParseService.parse("WeChat.apk","com.tencent.mm","Android","8.0","55CDU16726008808","WeChatLogin.xml");
+		TestUnit testunit = AndroidXmlParseService.parse("WeChat.apk","com.tencent.mm","Android","8.1.0","1ed814f6","TestCaseXml/WeChatLogin.xml");
 		runService = new RunUnitService(testunit);
 		System.out.println("-----------------------------------【微信登录流程的测试场景点】-----------------------------------");
 	}

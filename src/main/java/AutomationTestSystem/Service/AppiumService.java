@@ -6,13 +6,15 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class AppiumService {
 	
-    String cmdPath = "cmd.exe /c start";
-    String appiumPath = "D:\\Program\\Appium\\Appium\\node_modules\\.bin\\appium.cmd";
+	String cmdPath = "cmd.exe /c start";
+    String appiumPath = "TestData\\Appium\\Appium服务启动.bat";
     String cmdappium = cmdPath + " " + appiumPath;
     AndroidDriver<WebElement> driver;
 
-    public void appiumStart() throws IOException, InterruptedException {
-        Runtime.getRuntime().exec(cmdappium);
+    public void appiumStart(String Prot) throws IOException, InterruptedException {
+//    	Runtime.getRuntime().exec(cmdappium);
+    	System.out.println("cmd.exe /c start "+System.getProperty("user.dir")+"\\TestData\\Appium\\"+Prot+".bat");
+        Runtime.getRuntime().exec("cmd.exe /c start TestData\\Appium\\"+Prot+".bat");
         System.out.println("Appium服务启动中,耐心等待ing..."); 
         Thread.sleep(10000); 
     }
@@ -23,13 +25,26 @@ public class AppiumService {
 //    	Runtime.getRuntime().exec("schtasks /f /delete /tn taskmgr");
     	
     	//强制结束node.exe进程
-    	Runtime.getRuntime().exec("taskkill /f /IM node.exe");  
+    	Runtime.getRuntime().exec("taskkill /f /IM node.exe"); 
     	System.out.println("Appium服务关闭中,耐心等待ing...");
         Thread.sleep(3000);  
     }
 
-    public void StartAppium() throws IOException, InterruptedException {
+    /**
+	 * <br>关闭cmd进程</br>
+	 */
+	public void killProcess(){
+    	Runtime rt = Runtime.getRuntime();
+  	    try {
+  	      rt.exec("cmd.exe /c start wmic process where name='cmd.exe' call terminate");
+  	    } catch (IOException e) {
+  	      e.printStackTrace();
+  	    }  
+    }
+	
+    public void StartAppium(String Prot) throws IOException, InterruptedException {
         appiumStop();
-        appiumStart();
+        killProcess();
+        appiumStart(Prot);
     }
 }

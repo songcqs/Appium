@@ -73,8 +73,11 @@ public enum StepAction {
     SLIDE_LEFT("slide-left", "向左滑动", SlideActionHandler.class),
     SLIDE_RIGHT("slide-right", "向右滑动", SlideActionHandler.class),
     
-    GET_COOKIE("get-cookie", "获取cookie值", HttpRequestHandler.class),
+    SEND_GET("send-get", "发送Post接口请求", HttpRequestHandler.class),
     SEND_POST("send-post", "发送Post接口请求", HttpRequestHandler.class),
+    GET_TOKEN("get-token", "获取token值", HttpRequestHandler.class),
+    GET_COOKIE("get-cookie", "获取cookie值", HttpRequestHandler.class),
+    GET_INTVALUE("get-int-Value", "获取IntValue值", HttpRequestHandler.class),
     
     DB_INSERTA("db-inserta", "Oracle数据库插入", DBActionHandler.class),
     DB_INSERTW("db-insertw", "Oracle数据库插入", DBActionHandler.class),

@@ -40,7 +40,8 @@ public class CheckActionHandler {
 	}
 	
 	public void androidCheck(TestStep step) throws Exception{
-		String Actual = AppiumUtil.getElement(step).getText();
+//		String Actual = AppiumUtil.getElement(step).getText();
+		String Actual = AppiumUtil.getElement(step).getAttribute("name");
 		String Expected = AppiumUtil.parseStringHasEls(step.getExpect());
 		String FailHint = step.getMessage();
 		String CaseID = step.getCaseid();

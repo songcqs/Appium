@@ -164,6 +164,28 @@ public class AndroidXmlParseService {
 		driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		driver.manage().timeouts().implicitlyWait(80000, TimeUnit.MILLISECONDS);
 	}
+	
+	public static void AppiumCustom(String ApkName,String PlatformName,String PlatformVersion,String DeviceID,String Port) throws Exception {  
+		File apk = new File(ConfigUtil.getProperty("apk.path", Constants.CONFIG_COMMON), ApkName);
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("device", "uiautomator2");
+		capabilities.setCapability("platformName", PlatformName);
+		capabilities.setCapability("platformVersion", PlatformVersion);
+		capabilities.setCapability("deviceName", DeviceID);
+        capabilities.setCapability("udid", DeviceID);
+		capabilities.setCapability("noReset", true);
+		capabilities.setCapability("fullReset", false);
+		capabilities.setCapability("app", apk.getAbsolutePath());
+		capabilities.setCapability("sessionOverride", false);
+		capabilities.setCapability("unicodeKeyboard", true);
+		capabilities.setCapability("resetKeyboard", true);
+		capabilities.setCapability("noSign", true);
+//		capabilities.setCapability("autoWebview", true);
+		capabilities.setCapability("newCommandTimeout", 60000);
+		driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:"+Port+"/wd/hub"), capabilities);
+		driver.manage().timeouts().implicitlyWait(80000, TimeUnit.MILLISECONDS);
+	}
+	
 	/**
 	 * <br>根据用例的名称，截取图片，进行保存</br>
 	 *
@@ -239,40 +261,51 @@ public class AndroidXmlParseService {
 	 */
 	public static TestUnit parse(String ApkName,String ApkPackageName,String PlatformName,String PlatformVersion,String DeviceID,String XmlPath) {
 		try {
-//			appiumServer =new AppiumService();
-//			appiumServer.StartAppium();
-//			Runtime.getRuntime().exec("cmd /c start C:\\Users\\King-liu\\Desktop\\OPPO自动安装.bat"); 
-//			Thread.sleep(40000);
 			System.out.println("当前为重新安装APK，初始化Android设备,耐心等待App启动ing..."); 
 			AppiumConfigure(ApkName,ApkPackageName,PlatformName,PlatformVersion,DeviceID);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return parse(new File("src/test/java/TestCaseXml/"+XmlPath));
+		return parse(new File("src/test/java/"+XmlPath));
 	}
 	
 	public static TestUnit ParseTest(String ApkName,String PlatformName,String PlatformVersion,String DeviceID,String XmlPath) {
 		try {
-//			appiumServer =new AppiumService();
-//			appiumServer.StartAppium();
 			System.out.println("当前为测试环境，开始初始化Android设备,耐心等待App启动ing..."); 
 			AppiumTest(ApkName,PlatformName,PlatformVersion,DeviceID);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return parse(new File("src/test/java/TestCaseXml/"+XmlPath));
+		return parse(new File("src/test/java/"+XmlPath));
 	}
 	
 	public static TestUnit ParseProduction(String ApkName,String PlatformName,String PlatformVersion,String DeviceID,String XmlPath) {
 		try {
-			appiumServer =new AppiumService();
-			appiumServer.StartAppium();
 			System.out.println("当前为生产环境，开始初始化Android设备,耐心等待App启动ing..."); 
 			AppiumProduction(ApkName,PlatformName,PlatformVersion,DeviceID);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return parse(new File("src/test/java/TestCaseXml/"+XmlPath));
+		return parse(new File("src/test/java/"+XmlPath));
+	}
+	
+	public static TestUnit ParseCustom(int index,String ApkName,String PlatformName,String PlatformVersion,String DeviceID,String Prot,String XmlPath) {
+		try {
+			if(index==0){
+				//0表示启动前会杀掉所有Appium服务，做为第一个Appium服务启动
+				appiumServer =new AppiumService();
+				appiumServer.StartAppium(Prot);
+			}else if(index==1){
+				//1表示不会杀掉Appium服务，接着启动第二个Appium服务，适用多台设备并发测试
+				appiumServer =new AppiumService();
+				appiumServer.appiumStart(Prot);
+			}
+			System.out.println("当前为预发布环境，开始初始化Android设备,耐心等待App启动ing..."); 
+			AppiumCustom(ApkName,PlatformName,PlatformVersion,DeviceID,Prot);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return parse(new File("src/test/java/"+XmlPath));
 	}
 	
 	/**
