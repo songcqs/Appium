@@ -6,6 +6,16 @@
     <listeners>
         <listener class-name="AutomationTestSystem.Service.ExtentReportGenerateService"></listener>
     </listeners> 
-    <!-- C:\Windows\System32\drivers\etc
-        151.139.237.11    cdn.rawgit.com -->
+    <!-- C:\Windows\System32\drivers\etc\host文件末尾添加： 151.139.237.11 cdn.rawgit.com -->
+    <!-- TestNG配置 
+    Window设置选项——>TestNG配置选项——>
+    1.填写测试报告路径：
+     Output directory: TestOutput/ExtentReport
+    2.勾选：
+     Show view when tests complete
+     Show test name on view title when tests complete
+    3.最后两栏填写:
+     Excluded stack traces: org.testng.internal org.testng.TestRunner org.testng.SuiteRunner org.testng.remote.RemoteTestNG org.testng.TestNG sun.reflect java.lang
+     Pre Definded Listeners: org.uncommons.reportng.HTMLReporter
+    -->
 </suite>

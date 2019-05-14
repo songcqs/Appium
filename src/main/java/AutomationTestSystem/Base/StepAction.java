@@ -37,15 +37,19 @@ public enum StepAction {
     ANDROID_OPENNB("android-opennb", "模拟打开Androud系统通知栏操作", AndroidSystemHandler.class),
     ANDROID_SCROLL("android-scroll", "模拟执行Androud系统页面滚动操作", AndroidSystemHandler.class),
     ANDROID_SWIPE("android-swipe", "模拟执行Androud系统页面滑动操作", AndroidSystemHandler.class),
+
+    ADB_KEYCODE("adb-keycode", "Android端ADB系统键盘按键操作", AndroidSystemHandler.class),
+    ADB_INPUT("adb-input", "Android端ADB输入操作", AndroidSystemHandler.class),
+    ADB_CLICK("adb-click", "Android端ADB点击操作", AndroidSystemHandler.class),
     ADB_SWIPE("adb-swipe", "模拟执行ADB指令页面滑动操作", AndroidSystemHandler.class),
+    ADB_IME("adb-ime", "模拟执行ADB切换输入法操作", AndroidSystemHandler.class),
     
     WEB_CLEAR("web-clear", "Web端清除操作", ClearActionHandler.class),
     ANDROID_CLEAR("android-clear", "Android端清除操作", ClearActionHandler.class),
     
     WEB_INPUT("web-input", "Web端输入操作", InputActionHandler.class),
     ANDROID_INPUT("android-input", "Android端Appium输入操作", InputActionHandler.class),
-    ADB_INPUT("adb-input", "Android端ADB输入操作", InputActionHandler.class),
-    
+
     WEB_CHECK("web-check", "检查Web界面元素值", CheckActionHandler.class),
     WEB_CHECKLIST("web-checklist", "检查Web本地缓存的list中的元素", CheckActionHandler.class),
     ANDROID_CHECK("android-check", "检查Android界面元素值", CheckActionHandler.class),

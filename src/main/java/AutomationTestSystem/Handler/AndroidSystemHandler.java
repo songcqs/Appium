@@ -71,14 +71,64 @@ public class AndroidSystemHandler {
 	}
 	
 	/**
-	 * <br>Android-ADB指令页面滑动操作</br>
-	 *
+	 * <br>Android-ADB指令模拟键盘操作</br>
+	 * <step action="adb-keycode" locator="1ed814f6" value="3" desc="模拟点击安卓键盘HOME键"/>
+	 * keycode通过keycode表获取百度可查，home键的keycode=3，back键的keycode=4
 	 * @param step
-	 * @throws Exception 
+	 * @throws Exception
 	 */
-	public void adbSwipe(TestStep step) throws Exception{ 
+	public void adbKeycode(TestStep step) throws Exception{
 		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
 		step.getAndroidDriver().manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
-		Runtime.getRuntime().exec("adb shell input swipe "+ step.getValue());
+		Runtime.getRuntime().exec("adb -s "+step.getLocator()+" shell input keyevent  "+ step.getValue());
+	}
+	
+	/**
+	 * <br>Android-ADB指令页面输入操作，先点击输入框</br>
+	 * <step action="adb-click" locator="1ed814f6" value="艾丝凡" desc="输入文本艾丝凡"/>
+	 * @param step
+	 * @throws Exception
+	 */
+	public void adbInput(TestStep step) throws Exception{
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		step.getAndroidDriver().manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+		Runtime.getRuntime().exec("adb -s "+step.getLocator()+" shell input text  "+ step.getValue());
+	}
+	
+	/**
+	 * <br>Android-ADB指令页面坐标点击操作</br>
+	 * <step action="adb-click" locator="1ed814f6" details="x:500;y:500" desc="点击页面500，500坐标位置"/>
+	 * @param step
+	 * @throws Exception
+	 */
+	public void adbClick(TestStep step) throws Exception{
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		step.getAndroidDriver().manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+		Runtime.getRuntime().exec("adb -s "+step.getLocator()+" shell input tap  "+ step.getDetails().get("x") +" "+ step.getDetails().get("y"));
+	}
+	
+	/**
+	 * <br>Android-ADB指令页面滑动操作</br>
+	 * <step action="adb-swipe" locator="1ed814f6" details="x1:500;y1:500;x2:100;y2:500" desc="页面向左滑动200"/>
+	 * @param step
+	 * @throws Exception
+	 */
+	public void adbSwipe(TestStep step) throws Exception{
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		step.getAndroidDriver().manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+		Runtime.getRuntime().exec("adb -s "+step.getLocator()+" shell input swipe "+ step.getDetails().get("x1") +" "+ step.getDetails().get("y1")+ step.getDetails().get("x2") +" "+ step.getDetails().get("y2"));
+	}
+	
+	/**
+	 * <br>Android-ADB切换输入法操作</br>
+	 * <step action="adb-ime" value="io.appium.android.ime/.UnicodeIME" desc="切换Appium输入法"/>
+	 * 通过adb shell ime list -s 命令，获取value值
+	 * @param step
+	 * @throws Exception
+	 */
+	public void adbIme(TestStep step) throws Exception{
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		step.getAndroidDriver().manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+		Runtime.getRuntime().exec("adb -s "+step.getLocator()+" shell ime set "+ step.getValue());
 	}
 }

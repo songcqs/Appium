@@ -37,17 +37,4 @@ public class InputActionHandler {
 		e.clear();
 		e.sendKeys(AppiumUtil.parseStringHasEls(step.getValue()));	
 	}
-	
-	/**
-	 * <br>Android-ADB指令输入操作</br>
-	 *
-	 * @param step
-	 * @throws Exception 
-	 */
-	public void adbInput(TestStep step) throws Exception{ 
-		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
-		step.getAndroidDriver().manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
-		AppiumUtil.getElement(step).click(); 
-		Runtime.getRuntime().exec("adb shell input text "+step.getValue());
-	}
 }

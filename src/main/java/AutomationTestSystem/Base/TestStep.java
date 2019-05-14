@@ -38,8 +38,8 @@ public class TestStep extends TestBase{
     
 	/**
 	 * 行为的细节描述，其格式与css中的样式格式一致，比如<br/>
-	 * 在要做滑动操作时，细节描述如下，range代表滑动时间，num代表滑动次数
-	 * <h1>details="range:500;num:1;"</h1>
+	 * 在要做滑动操作时，细节描述如下，duration代表滑动时间，num代表滑动次数，amp代表滑动幅度
+	 * <h1>details="duration:500;num:2;amp:1"</h1>
 	 * 具体不同的操作的文档会在项目稳定后整理出来
 	 **/
 	private Map<String,String> details;
