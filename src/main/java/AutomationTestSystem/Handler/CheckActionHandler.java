@@ -3,6 +3,7 @@ package AutomationTestSystem.Handler;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 
 import AutomationTestSystem.Base.TestStep;
@@ -30,6 +31,7 @@ public class CheckActionHandler {
 	 * @param step
 	 * @throws Exception 
 	 */
+	//获取元素的文本值
 	public void webCheck(TestStep step) throws Exception{
 		String Actual = SeleniumUtil.getElement(step).getText();
 		String Expected = SeleniumUtil.parseStringHasEls(step.getExpect());	
@@ -39,6 +41,28 @@ public class CheckActionHandler {
 		checkEqualsWeb(Actual,Expected,FailHint,CaseID);
 	}
 	
+	//获取元素的属性值
+	public void webCheckvalue(TestStep step) throws Exception{
+		String Actual = SeleniumUtil.getElement(step).getAttribute(step.getValue());
+		String Expected = SeleniumUtil.parseStringHasEls(step.getExpect());	
+		String FailHint = step.getMessage();
+		String CaseID = step.getCaseid();
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		checkEqualsWeb(Actual,Expected,FailHint,CaseID);
+	}
+	
+	//获取调用JS脚本返回的值
+	public void webCheckjs(TestStep step) throws Exception{
+//		String js = "var user_input = document.getElementById(\"passport_51_user\").title;return user_input;";
+//		String js1 = "var specVol =$(\"#specVol\").val();return specVol;";
+//		String js2 = "return computeVol();";
+		String Actual = (String) ((JavascriptExecutor)step.getWebDriver()).executeScript(step.getValue());  
+		String Expected = SeleniumUtil.parseStringHasEls(step.getExpect());	
+		String FailHint = step.getMessage();
+		String CaseID = step.getCaseid();
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		checkEqualsWeb(Actual,Expected,FailHint,CaseID);
+	}
 	public void androidCheck(TestStep step) throws Exception{
 //		String Actual = AppiumUtil.getElement(step).getText();
 		String Actual = AppiumUtil.getElement(step).getAttribute("name");
