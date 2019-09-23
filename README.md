@@ -2,7 +2,7 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Appium
-![](https://testerhome.com/uploads/photo/2018/27f5bcda-c947-48e5-8f9b-8e62c42c5a11.png!large)
+![](https://images.gitee.com/uploads/images/2019/0923/113030_8904dd1e_1325509.png)
 
     Appium是一个移动端的自动化框架，可用于测试原生应用，移动网页应用和混合型应用，且是跨平台的，可用于IOS和Android以及Firefox OS的操作系统
         •  原生的应用是指用Android或IOS的SDK编写的应用，例如微信，QQ等APP
@@ -200,7 +200,7 @@
  ---
 ### 四、执行用例
  - 编写完对应测试用例类【WeChatLogin.java】，和测试脚本【WeChatLogin.xml】后，在IDE集成开发环境下选择WeChatLogin.java右键使用TestNG运行即可
-![](https://testerhome.com/uploads/photo/2018/d50bb63a-c419-42d6-9606-cc587c219a3b.png!large)
+![](https://images.gitee.com/uploads/images/2019/0923/113030_e80cf4e3_1325509.png)
 
  ---
 ### 五、测试报告
@@ -226,7 +226,7 @@
             <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
         </listeners>      
     </suite>
-![](https://testerhome.com/uploads/photo/2018/951265b3-14c3-4077-b5e6-128c5e6836ba.png!large)
+![](https://images.gitee.com/uploads/images/2019/0923/113030_2bd0624a_1325509.png)
 
  ---
 ### [ExtentReports](https://static.oschina.net/uploads/space/2018/0508/141802_q76M_3854545.png)
@@ -241,14 +241,14 @@
         <!-- C:\Windows\System32\drivers\etc
         151.139.237.11    cdn.rawgit.com -->
     </suite>
- ![](https://testerhome.com/uploads/photo/2018/ba36194f-c51f-42fa-862c-8c5ec6ea38e3.png!large)
+ ![](https://images.gitee.com/uploads/images/2019/0923/113030_557f06cd_1325509.png)
  - 第二种测试报告，需要翻墙才能正常显示，否则页面显示乱码，因为是国外的东西
  - 或者在C:\Windows\System32\drivers\etc    host文件末尾添加151.139.237.11   cdn.rawgit.com
  
  ---
 ### 六、Jnekins持续集成：
-![](https://testerhome.com/uploads/photo/2018/6c209373-80f5-47f3-a9d7-e7dbfe3ea523.png!large)
-![](https://testerhome.com/uploads/photo/2018/e24ab598-67da-471d-a924-cc5360c92ec7.png!large)
+![](https://images.gitee.com/uploads/images/2019/0923/113030_12aab796_1325509.png)
+![](https://images.gitee.com/uploads/images/2019/0923/113030_0e30e238_1325509.png)
  - 搭建Jenkins环境，具体请参考: https://blog.csdn.net/wuxuehong0306/article/details/50016547
  - 配置Jenkins自动化持续集成项目，即可实现远程服务器自动（构建，编译，打包）运行脚本，发送邮件测试报告等
  
@@ -260,7 +260,7 @@
 **非常感谢您花费时间阅读，祝您在这里记录、阅读、分享愉快！**
 **欢迎留言评论，有问题也可以联系我或者加群交流...**
 
-作者：[@刘智King](http://shang.qq.com/email/stop/email_stop.html?qq=1306086303&sig=a1c657365db7e82805ea4b2351081fc3ebcde159f8ae49b1&tttt=1)         
+作者：[@刘智King](http://wpa.qq.com/msgrd?v=3&uin=1306086303&site=自动化&menu=yes)         
 QQ：1306086303     
 Email：hagyao520@163.com
 
